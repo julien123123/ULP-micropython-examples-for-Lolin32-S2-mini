@@ -1,6 +1,8 @@
 # ULP-micropython-examples-for-Lolin32-S2-mini
 Examples of  micropython codes that are tested to work on the Lolin32 S2 mini with the library esp32_ulp
 
+I decided to publish those files since there aren't many example programs written for the ULP with the micropython esp32_ULP library. I hope this helps some gain more insights as to how a working, tested ULP assembly program looks like.
+
 # Dependencies
 ESP32_ULP: https://github.com/micropython/micropython-esp32-ulp 
 # Micopython versions
