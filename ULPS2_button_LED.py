@@ -9,10 +9,9 @@ This script will open the mini's led when the button on pin 0 is pressed so you 
 You can see that if you CTRL+D in the repl, the led still lights up when you press the button.
 When you do a full reset, the behaviour stops (that is unless you renamed this file as 'main.py')
 
-Currently, the behaviour stops working when the machine is in deepsleep. I'm trying to find out why
-my 2 biggest suspect are:
-1: maybe the pins need to be re-inited when the machine is in deepsleep
-2: maybe pin 0 has another behaviour if the esp32 is in deepsleep because it is the boot pin after all
+If you send the machine to a deep sleep because the code need to be re-inited (this is prevented by the magic token). Nevertheless
+if you print hex(mem32[1342177284]), the address of 'magic', the secret token will still be there. If you press the reset
+button, you wont' get a coffee.
 
 adapted from the examples of the ESP32_ULP library : https://github.com/micropython/micropython-esp32-ulp
 
