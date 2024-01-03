@@ -18,20 +18,6 @@ import time
 from esp32_ulp import src_to_binary
 
 # To find the address of the variable to read in the main program, the first variable's address is 0, and add 4 for the next one
-'''The ULP program is designed to measure the duration of button presses and send the data to the main processor. Here's a high-level overview of the program:
-
-    Initialize the ULP program and set up the GPIO pin for the button.
-    Wait for the button to be pressed.
-    When the button is pressed, start a counter to measure the duration of the button press.
-    Wait for the button to be released.
-    When the button is released, stop the counter and store the duration of the button press.
-    Wait for a short delay to debounce the button.
-    Repeat steps 2-6 until the ULP program is reset.
-
-The ULP program uses a counter to measure the duration of button presses. The counter is incremented every cycle (approximately 800ns) and is stored in memory.
-When the button is released, the duration of the button press is calculated by subtracting the value of the counter at the start of the button press from the value of the
-counter at the end of the button press.
-'''
 source = """\
 #define DR_REG_RTCIO_BASE            0x3f408400
 #define RTC_IO_TOUCH_PAD0_REG       (DR_REG_RTCIO_BASE + 0x94)
